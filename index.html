@@ -4,287 +4,789 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IT Helpdesk Specialists</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
+
   <style>
-    body { background-color: #000033; font-family: 'Kanit', sans-serif; }
-    label { color: white; }
-    .container { max-width: 600px; }
+    body {
+      background-color: #000033;
+      font-family: 'Kanit', sans-serif;
+    }
+
+    label {
+      color: white;
+    }
+
+    .container {
+      max-width: 600px;
+    }
   </style>
 </head>
+
 <body>
+
   <div class="text-center mt-4">
-    <img src="https://raw.githubusercontent.com/ITFline/imagesITline/main/IM/ITF-HD.png" width="416" />
+    <img
+      src="https://raw.githubusercontent.com/ITFline/imagesITline/main/IM/ITF-HD.png"
+      width="416"
+    />
   </div>
 
+
   <div class="container mt-4">
+
     <form id="myForm" class="needs-validation" novalidate>
+
       <div class="text-center mb-3">
         <h3 class="text-light">IT Helpdesk Specialists</h3>
       </div>
+
+
+      <!-- ชื่อ -->
       <div class="mb-3">
-        <label for="name">ชื่อ (ผู้ติดต่อ)</label>
-       <input type="text" id="name" class="form-control" required  pattern="^(?=(?:.*[A-Za-zก-๙]){2,}).+"/>
-        <div class="invalid-feedback"> กรุณากรอกชื่อ-สกุล</div>
+
+        <label for="name">
+          ชื่อ (ผู้ติดต่อ)
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          required
+          pattern="^(?=(?:.*[A-Za-zก-๙]){2,}).+"
+        />
+
+        <div class="invalid-feedback">
+          กรุณากรอกชื่อ-สกุล
+        </div>
+
       </div>
+
+
+      <!-- เบอร์ติดต่อ -->
       <div class="mb-3">
-        <label for="phone">เบอร์ติดต่อ (ที่สามารถติดต่อได้)</label>
-        <input type="text" id="phone" class="form-control" required  pattern="^[0-9]{4,10}$"/>
-        <div class="invalid-feedback">กรุณากรอกเบอร์</div>
+
+        <label for="phone">
+          เบอร์ติดต่อ (ที่สามารถติดต่อได้)
+        </label>
+
+        <input
+          type="text"
+          id="phone"
+          class="form-control"
+          required
+          pattern="^[0-9]{4,10}$"
+        />
+
+        <div class="invalid-feedback">
+          กรุณากรอกเบอร์
+        </div>
+
       </div>
+
+
+      <!-- อุปกรณ์ -->
       <div class="mb-3">
-        <label for="device">*อุปกรณ์ที่มีปัญหา*</label>
-        <select id="device" class="form-select" required>
-          <option value="">-- กรุณาเลือก --</option>
+
+        <label for="device">
+          *อุปกรณ์ที่มีปัญหา*
+        </label>
+
+        <select
+          id="device"
+          class="form-select"
+          required
+        >
+
+          <option value="">
+            -- กรุณาเลือก --
+          </option>
+
           <option>Computer PC</option>
           <option>Notebook</option>
           <option>MacBook</option>
           <option>Macintosh</option>
-           <option>อุปกรณ์ต่อพ่วง อื่นๆ</option>
+          <option>อุปกรณ์ต่อพ่วง อื่นๆ</option>
+
         </select>
-        <div class="invalid-feedback">กรุณาเลือกอุปกรณ์</div>
+
+        <div class="invalid-feedback">
+          กรุณาเลือกอุปกรณ์
+        </div>
+
       </div>
+
+
+      <!-- ปัญหา -->
       <div class="mb-3">
-        <label for="problem">*แจ้งปัญหาการใช้งาน*</label>
-        <select id="problem" class="form-select" required>
-          <option value="">-- กรุณาเลือก --</option>
+
+        <label for="problem">
+          *แจ้งปัญหาการใช้งาน*
+        </label>
+
+        <select
+          id="problem"
+          class="form-select"
+          required
+        >
+
+          <option value="">
+            -- กรุณาเลือก --
+          </option>
+
           <option>เบิกทดแทน (สำหรับบริษัทGI)</option>
           <option>โปรแกรม Error</option>
           <option>เข้าใช้งานไดร์กลางของแผนกไม่ได้</option>
           <option>Remote Desktop เข้าใช้งานไม่ได้</option>
-           <option>Parallels เข้าใช้งานไม่ได้</option>
+          <option>Parallels เข้าใช้งานไม่ได้</option>
           <option>Microsoft ไม่สามารถใช้งานได้</option>
           <option> Windowsแจ้งActivate</option>
-            <option>Microsoft office แจ้งActivate</option>
+          <option>Microsoft office แจ้งActivate</option>
           <option> Mail@comseven.com ไม่สามารถใช้งานได้</option>
           <option>ลืมรหัสผ่านเมล์</option>
-           <option>เมล์ ข้อความ ส่งออก/รับเข้า ไม่ได้</option>
+          <option>เมล์ ข้อความ ส่งออก/รับเข้า ไม่ได้</option>
           <option> Mail เต็ม</option>
           <option>เครื่องคอมพิวเตอร์ไม่สามารถใช้งาน</option>
-            <option>เครื่องค้าง จอดำ เปิดไม่ติด</option>
+          <option>เครื่องค้าง จอดำ เปิดไม่ติด</option>
           <option>VPN ไม่สามารถใช้งานได้</option>
           <option>อุปกรณ์ต่อพ่วงไม่สามารถใช้งานได้ (Printer)</option>
-           <option>ห้องประชุมไม่สามารถใช้งานได้</option>
+          <option>ห้องประชุมไม่สามารถใช้งานได้</option>
           <option> เชื่อมต่อจอ TV / โปรเจคเตอร์ ไม่ขึ้นภาพ</option>
           <option>โปรแกรม ITEC ไม่สามารถใช้งานได้</option>
-            <option>โปรแกรม HRMI8/ESS ไม่สามารถใช้งานได้</option>
+          <option>โปรแกรม HRMI8/ESS ไม่สามารถใช้งานได้</option>
           <option>โปรแกรม Oracle APS ไม่สามารถใช้ได้</option>
           <option>โปรแกรม COM7PRO ไม่สามารถใช้งานได้</option>
-           <option>Internet / WiFi ไม่สามารถใช้งานได้</option>
+          <option>Internet / WiFi ไม่สามารถใช้งานได้</option>
           <option>จำรหัส WiFi ไม่ได้</option>
           <option>LAN ไม่สามารถใช้งานได้</option>
           <option>VPN ใช้งานไม่ได้</option>
           <option>WiFi ไม่เสถียร</option>
           <option>โปรแกรม Error</option>
-           <option>VPN ใช้งานไม่ได้</option>
+          <option>VPN ใช้งานไม่ได้</option>
           <option> WiFi เชื่อมต่อไม่ได้</option>
-      
+
         </select>
-        <div class="invalid-feedback">กรุณาเลือกปัญหา</div>
+
+        <div class="invalid-feedback">
+          กรุณาเลือกปัญหา
+        </div>
+
       </div>
+
+
+      <!-- แผนก -->
       <div class="mb-3">
-        <label for="place">*แผนก*🔎</label>
-        <select id="place" class="form-select" required>
-          <option value="">-- กรุณาเลือก --</option>
-           <option>GI</option>
-           <option>EV7</option>
+
+        <label for="place">
+          *แผนก*🔎
+        </label>
+
+        <select
+          id="place"
+          class="form-select"
+          required
+        >
+
+          <option value="">
+            -- กรุณาเลือก --
+          </option>
+
+          <option>GI</option>
+          <option>EV7</option>
           <option>Adept</option>
           <option>Account</option>
           <option>Banana Franchise</option>
-            <option>Business Development</option>
+          <option>Business Development</option>
           <option>Call Center</option>
           <option>Double 7</option>
-            <option> Dr.Pharma</option>
+          <option> Dr.Pharma</option>
           <option>E-Commerce</option>
           <option>Education and Enterprise</option>
-            <option>Executive Office</option>
+          <option>Executive Office</option>
           <option>Event</option>
           <option>Finance</option>
-            <option>General Affairs</option>
+          <option>General Affairs</option>
           <option>HQ Staff Coach</option>
           <option>HRD</option>
-            <option>Human Resources Management</option>
+          <option>Human Resources Management</option>
           <option>iCare Operation</option>
           <option>IT Facilities</option>
-            <option>Internal Audit</option>
+          <option>Internal Audit</option>
           <option>InterVision</option>
           <option>Innovation Development</option>
-            <option>Legal Office</option>
+          <option>Legal Office</option>
           <option>Marketing</option>
           <option>Marketing Communication Banana</option>
-            <option>Merchandising Support</option>
+          <option>Merchandising Support</option>
           <option>Management Information System</option>
           <option>MIS Fin Tech</option>
-            <option>NON IT</option>
+          <option>NON IT</option>
           <option>Operation Expense Administrative</option>
           <option>Operation Standard</option>
-            <option>Online Fulfillment</option>
+          <option>Online Fulfillment</option>
           <option>Operation Apple</option>
           <option>Operation Admin</option>
-            <option>Operation Data Support</option>
+          <option>Operation Data Support</option>
           <option>Online Marketing</option>
           <option>product managerment</option>
-            <option>Retail Buyer</option>
+          <option>Retail Buyer</option>
           <option>Retail Merchandiser</option>
           <option>Service Center</option>
-            <option>Service Management</option>
+          <option>Service Management</option>
           <option>Sales & Service Management</option>
           <option>Sales & Retial Business Development</option>
-            <option>Store Checker</option>
+          <option>Store Checker</option>
           <option>SweeKnowHow</option>
           <option>Talent Acquisition</option>
-            <option>True Operation</option>
-            <option>Thunderfinfin</option>
+          <option>True Operation</option>
+          <option>Thunderfinfin</option>
           <option>Warehouse</option>
           <option>4Paws</option>
-            <option>GI</option>          
+          <option>GI</option>
+             <option>TT</option>
+
         </select>
-        <div class="invalid-feedback">กรุณาเลือกแผนก</div>
+
+        <div class="invalid-feedback">
+          กรุณาเลือกแผนก
+        </div>
+
       </div>
+
+
+      <!-- ปุ่มแจ้ง CASE -->
       <div class="text-center">
-        <button type="submit" class="btn btn-warning w-100">
-          <i class="bi bi-send-fill"></i> แจ้งCASE
+
+        <button
+          type="submit"
+          id="submitBtn"
+          class="btn btn-warning w-100"
+        >
+          <i class="bi bi-send-fill"></i>
+          แจ้งCASE
         </button>
+
       </div>
+
     </form>
+
   </div>
+
 
   <!-- JS Libraries -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
+
   <script>
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbznmXbIa8AaZ2WpUO5f-sDu4PHrlSCc9bDkrPCJGAf4m-V5CHZKOREGgwf4YPc1-tHO/exec';
+
+    // ==========================================
+    // Apps Script URL เดิม
+    // ==========================================
+
+    const scriptUrl =
+      'https://script.google.com/macros/s/AKfycbznmXbIa8AaZ2WpUO5f-sDu4PHrlSCc9bDkrPCJGAf4m-V5CHZKOREGgwf4YPc1-tHO/exec';
+
+
+    // ==========================================
+    // ป้องกันการกด Submit ซ้ำ
+    // ==========================================
+
+    let isSubmitting = false;
+
+
+    // ==========================================
+    // LIFF เดิม
+    // ==========================================
 
     $(document).ready(() => {
-      liff.init({ liffId: '1657930419-RPPKl4D6', withLoginOnExternalBrowser: true })
-        .then(() => console.log('LIFF Initialized'))
-        .catch(err => Swal.fire({ icon: 'error', title: 'LIFF error', text: err.message }));
+
+      liff.init({
+
+        liffId: '1657930419-RPPKl4D6',
+
+        withLoginOnExternalBrowser: true
+
+      })
+
+      .then(() => {
+
+        console.log('LIFF Initialized');
+
+      })
+
+      .catch(err => {
+
+        Swal.fire({
+
+          icon: 'error',
+
+          title: 'LIFF error',
+
+          text: err.message
+
+        });
+
+      });
+
     });
 
-    function submitForm() {
-      $.LoadingOverlay('show');
 
-      const uid = liff.getDecodedIDToken()?.sub || '';
-      if (!uid) {
-        $.LoadingOverlay('hide');
-        Swal.fire({ icon: 'error', title: 'ไม่พบ LINE User ID' });
+
+    // ==========================================
+    // SUBMIT FORM
+    // ==========================================
+
+    function submitForm() {
+
+
+      // ========================================
+      // ถ้ากำลังส่งอยู่
+      // ห้ามส่งซ้ำ
+      // ========================================
+
+      if (isSubmitting) {
+
+        console.log('กำลังส่งข้อมูลอยู่');
+
         return;
+
       }
 
+
+      // ล็อกทันที
+      isSubmitting = true;
+
+
+      const submitBtn =
+        document.getElementById('submitBtn');
+
+
+      // ปิดปุ่ม
+      submitBtn.disabled = true;
+
+
+      // เปลี่ยนข้อความปุ่ม
+      submitBtn.innerHTML =
+        '<span class="spinner-border spinner-border-sm me-2"></span>กำลังส่ง...';
+
+
+      // Loading เดิม
+      $.LoadingOverlay('show');
+
+
+
+      // ========================================
+      // LINE UID
+      // ========================================
+
+      const uid =
+        liff.getDecodedIDToken()?.sub || '';
+
+
+      if (!uid) {
+
+
+        $.LoadingOverlay('hide');
+
+
+        // ถ้าไม่พบ UID
+        // เปิดปุ่มกลับ
+        isSubmitting = false;
+
+        submitBtn.disabled = false;
+
+        submitBtn.innerHTML =
+          '<i class="bi bi-send-fill"></i> แจ้งCASE';
+
+
+        Swal.fire({
+
+          icon: 'error',
+
+          title: 'ไม่พบ LINE User ID'
+
+        });
+
+
+        return;
+
+      }
+
+
+
+      // ========================================
+      // ข้อมูลเดิม
+      // ========================================
+
       const data = {
+
         opt: 'savedata',
+
         uid: uid,
+
         name: $('#name').val(),
+
         phone: $('#phone').val(),
+
         device: $('#device').val(),
+
         problem: $('#problem').val(),
+
         place: $('#place').val()
+
       };
 
+
+
+      // ========================================
+      // AJAX เดิม
+      // ========================================
+
       $.ajax({
+
         method: 'POST',
+
         url: scriptUrl,
+
         data: data,
+
         dataType: 'json',
+
+
+
+        // ======================================
+        // SUCCESS
+        // ======================================
+
         success: function (res) {
+
+
           $.LoadingOverlay('hide');
+
+
           if (res.status === 'success') {
-            Swal.fire({ icon: 'success', title: 'แจ้งงานเรียบร้อย' }).then(() => {
+
+
+            // ==================================
+            // สำเร็จ
+            //
+            // สำคัญ:
+            // ไม่เปิดปุ่มกลับ
+            // เพื่อป้องกันการแจ้ง CASE ซ้ำ
+            // ==================================
+
+
+            Swal.fire({
+
+              icon: 'success',
+
+              title: 'แจ้งงานเรียบร้อย'
+
+            }).then(() => {
+
+
+              // ================================
+              // FLEX MESSAGE เดิม
+              // ================================
+
               const flex = {
+
                 type: 'flex',
+
                 altText: 'แจ้งงานเรียบร้อย',
+
                 contents: {
+
                   type: 'bubble',
+
                   body: {
+
                     type: 'box',
+
                     layout: 'vertical',
+
                     spacing: 'md',
+
                     contents: [
+
                       {
+
                         type: 'text',
+
                         text: '✅แจ้งงานเรียบร้อย✅',
+
                         weight: 'bold',
+
                         size: 'xl',
+
                         align: 'center'
+
                       },
-                      { type: 'separator', margin: 'md' },
+
                       {
+
+                        type: 'separator',
+
+                        margin: 'md'
+
+                      },
+
+                      {
+
                         type: 'text',
-                        text: '🚨เลขCase: ' + res.id,
+
+                        text:
+                          '🚨เลขCase: ' + res.id,
+
                         weight: 'bold',
+
                         size: 'xl'
-                      
+
                       },
+
                       {
+
                         type: 'text',
-                        text: 'อุปกรณ์ที่มีปัญหา: ' + data.device,
-                        size: 'sm',                      
+
+                        text:
+                          'อุปกรณ์ที่มีปัญหา: '
+                          + data.device,
+
+                        size: 'sm',
+
                         wrap: true
-                       
+
                       },
+
                       {
+
                         type: 'text',
-                        text: 'ปัญหาที่แจ้ง: ' + data.problem,
-                        size: 'sm',                      
+
+                        text:
+                          'ปัญหาที่แจ้ง: '
+                          + data.problem,
+
+                        size: 'sm',
+
                         wrap: true
+
                       }
+
                     ]
+
                   }
+
                 }
+
               };
+
+
+
+              // ================================
+              // ส่งข้อความ LINE
+              // ================================
+
               liff.sendMessages([
+
                 {
+
                   type: 'text',
-                  text: `หมายเลขCase\n ${res.id}`
+
+                  text:
+                    `หมายเลขCase\n ${res.id}`
+
                 },
+
                 flex
-              ]).then(() => liff.closeWindow());
+
+              ])
+
+
+              .then(() => {
+
+                // ส่งข้อความสำเร็จ
+                liff.closeWindow();
+
+              })
+
+
+              .catch(err => {
+
+                console.error(
+                  'LINE sendMessages error:',
+                  err
+                );
+
+
+                // ข้อมูลถูกสร้างใน Sheet แล้ว
+                // ไม่เปิดปุ่มให้กดซ้ำ
+                // ปิด LIFF ไปเลย
+
+                liff.closeWindow();
+
+              });
+
+
             });
+
+
+
           } else {
-            Swal.fire({ icon: 'error', title: 'บันทึกข้อมูลล้มเหลว' });
+
+
+            // ==================================
+            // Apps Script ตอบ Error
+            // เปิดปุ่มให้ลองใหม่
+            // ==================================
+
+            isSubmitting = false;
+
+            submitBtn.disabled = false;
+
+            submitBtn.innerHTML =
+              '<i class="bi bi-send-fill"></i> แจ้งCASE';
+
+
+            Swal.fire({
+
+              icon: 'error',
+
+              title: 'บันทึกข้อมูลล้มเหลว'
+
+            });
+
+
           }
+
         },
+
+
+
+        // ======================================
+        // AJAX ERROR
+        // ======================================
+
         error: function (err) {
+
+
           console.error(err);
+
+
           $.LoadingOverlay('hide');
-          Swal.fire({ icon: 'error', title: 'ไม่สามารถเชื่อมต่อได้' });
+
+
+          // Request ไม่สำเร็จ
+          // เปิดปุ่มกลับให้ลองใหม่
+
+          isSubmitting = false;
+
+          submitBtn.disabled = false;
+
+          submitBtn.innerHTML =
+            '<i class="bi bi-send-fill"></i> แจ้งCASE';
+
+
+          Swal.fire({
+
+            icon: 'error',
+
+            title: 'ไม่สามารถเชื่อมต่อได้'
+
+          });
+
+
         }
+
       });
+
     }
 
+
+
+    // ==========================================
+    // FORM SUBMIT
+    // ==========================================
+
     (() => {
-      const form = document.querySelector('#myForm');
-      form.addEventListener('submit', event => {
-        event.preventDefault();
-        if (!form.checkValidity()) {
-          form.classList.add('was-validated');
-        } else {
-          submitForm();
-        }
-      }, false);
+
+
+      const form =
+        document.querySelector('#myForm');
+
+
+      form.addEventListener(
+
+        'submit',
+
+        event => {
+
+
+          event.preventDefault();
+
+
+          // ====================================
+          // กัน Submit ซ้ำอีกชั้น
+          // ====================================
+
+          if (isSubmitting) {
+
+            return;
+
+          }
+
+
+          if (!form.checkValidity()) {
+
+
+            form.classList.add(
+              'was-validated'
+            );
+
+
+          } else {
+
+
+            submitForm();
+
+
+          }
+
+        },
+
+        false
+
+      );
+
     })();
+
+
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
-</body>
 
 
-<html>
-
-<body>
+  <!-- รูปด้านล่างเดิม -->
   <div align="center">
-    <img border="0" src="https://raw.githubusercontent.com/ITFline/imagesITline/main/IM/IM2B.png" alt="coala" width="350" height="195">
+
+    <img
+      border="0"
+      src="https://raw.githubusercontent.com/ITFline/imagesITline/main/IM/IM2B.png"
+      alt="coala"
+      width="350"
+      height="195"
+    />
+
+  </div>
+
 
 </body>
-
 </html>
